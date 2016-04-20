@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<style type="text/css">
+
+		.container {
+			margin: 0 auto;
+			width: 88%;
+		}
+		.box {
+			background-color: hotpink;
+			width: 33%;
+			height: 300px;
+			border: lightyellow solid 4px;
+			text-align: center;
+			font-size: 100px;
+			color: white;
+			padding-top: 78px;
+			}
+		.kaboom {
+			background-color: deeppink;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="hiDe"class="row">
+			<div id="aBox" class="box col-md-4">A</div>
+			<div id="bBox" class="box col-md-4">B</div>
+			<div class="box col-md-4">C</div>
+		</div>
+
+		<div class="row">
+			<div class="box col-md-4">D</div>
+			<div id="eBox" class="kaboom box col-md-4">E</div>
+			<div class="box col-md-4">F</div>
+		</div>
+
+		<div class="row">
+			<div class="box col-md-4">G</div>
+			<div class="box col-md-4">H</div>
+			<div class="box col-md-4">I</div>
+		</div>
+
+
+ 	</div>
+
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script>
+	    $(document).ready(function(){
+	    	$('#aBox')
+		    	.slideUp(1000, function(){
+		    		// alert('hide complete');
+		    });
+
+		    $('#bBox').click(function(){
+		    	$(this).fadeOut(2000);
+		    });
+
+		    $('#eBox').hover(
+		    	// This is for the hover on
+		    	function(){
+		    		$(this).addClass('kaboom');
+		    		console.log('a');
+		    	},
+
+		        // This is for the hover off
+		    	function(){
+		    		$(this).removeClass('kaboom');
+		    		console.log('b');
+		    	});
+
+	    });
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
